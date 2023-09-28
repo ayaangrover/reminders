@@ -1,89 +1,133 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+    border-radius: 12px;
+    color:#333;
+}
+
+#description{
+    resize:none;
+
+}
+
+/* Windows-like font */
 body {
-    background-color: rgb(208, 208, 208);
+    font-family: Montserrat, sans-serif;
+    background-image: url(house.jpg);
+    background-size: 100%;
+    background-position:top;
+    background-repeat: no-repeat;
+    color: #333;
 }
 
-.container {
-    max-width: 500px;
-    width: 100%;
-    margin: auto;
+/* Header styles */
+header {
+    background-color: #0078D700;
+    color: #333;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-.col {
-    height: 90vh;
-    background-color: #fff;
-    width: inherit;
-}
-
-.title {
-    height: 200px;
-    background-color: rgb(55, 102, 255);
-    color: #fff;
-    padding: 0 20px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-
-.title h1 {
-    position: relative;
-    top: 140px;
-    font-size: 30pt;
-}
-
-.title button {
-    position: relative;
-    top: 70px;
-    left: 400px;
-    color:rgb(55, 102, 255);
-    background-color: #fff;
-    font-size: 20pt;
-    border: none;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 50px;
+.logo {
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
-.list {
-    width: 450px;
-    height: 580px;
-    overflow-y: scroll;
-    margin: 20px auto;
+/* Main content styles */
+main {
+    width: 40%;
+    height:auto;
+    background-color: rgba(255,255,255,0.06);
+    position: absolute;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left:auto;
+    margin-right:auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 10px 10px 35px rgba(0,0,0,0.25);
+    font-family: Montserrat;
+    color:#333;
 }
 
-.reminder {
-    width: 420px;
-    height: 50px;
-    border: 1px solid #fff;
-    color: #000;
-    background-color: #fff;
-    list-style: none;
-    line-height: 50px;
-    margin: 5px auto;
-    position: relative;
-    right: 20px;
+/* Form styles */
+.reminder-form {
+    padding: 20px;
+}
+
+.reminder-form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+    width: 100%;
     padding: 10px;
-    display: -webkit-inline-box;
-    box-shadow: rgba(0,0,0,0.15) 1.50px 1.50px 2px;
+    border: 1px solid #ccc;
+    background-color: rgba(255,255,255,0.06);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 10px 10px 35px rgba(0,0,0,0.25);
+    font-family: Montserrat;
+    color:#333;
+    
 }
 
-.text {
-    width: 280px;
-}
-
-.btn-check {
+button {
+    background-color: #0078D7;
     color: #fff;
-    background-color: rgb(55, 102, 255);
+    padding: 10px 20px;
     border: none;
-    width: 70px;
-    height: 35px;
+    cursor: pointer;
 }
 
-.btn-delete {
-    color: #fff;
-    background-color: red;
-    border: none;
-    width: 60px;
-    height: 35px;
-    margin: 0 5px;
+/* Reminder list styles */
+.reminder-list {
+    padding: 20px;
+}
+
+.reminder-list h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+ul#reminder-list {
+    list-style-type: none;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+}
+
+.reminder-actions{
+    margin-top:20px
+}
+
+p{
+    margin-top:4px;
 }

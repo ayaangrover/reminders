@@ -1,24 +1,45 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">  
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Modern Reminders</title>
+</head>
+<body>
+    <!-- <header class="apple-header">
         <div class="container">
-            <div class="col">
-                <div class="title">
-                    <h1>Today</h1>
-                    <button id="newReminder">+</button>
-                </div>
-                <ul class="list">
-                    <!-- Enter a list of reminder -->
+            <h1 class="logo">Modern Reminders</h1>
+        </div>
+    </header> -->
+    <main>
+        <section class="container">
+            <div class="reminder-form">
+                <h2>Add a Reminder</h2>
+                <form id="reminder-form">
+                    <div class="form-group">
+                        <label for="title">Title:</label>
+                        <input type="text" id="title" name="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Date:</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description:</label>
+                        <textarea id="description" name="description"></textarea>
+                    </div>
+                    <button type="submit">Add Reminder</button>
+                </form>
+            </div>
+            <div class="reminder-list">
+                <h2>Your Reminders</h2>
+                <ul id="reminder-list">
+                    <!-- Reminders will be added here dynamically using JavaScript -->
                 </ul>
             </div>
-        </div>
-        <script src="script.js" async defer></script>
-    </body>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
 </html>
